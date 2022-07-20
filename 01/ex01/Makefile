@@ -1,0 +1,19 @@
+FLAGS = -Wall -Werror -Wextra -std=c++98
+
+NAME = phonebook
+
+SRC = main.cpp Phonebook.cpp Phonebook.hpp Contact.hpp Contact.cpp
+OBJ = $(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	c++ $(FLAGS) -o $(NAME) $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: clean fclean $(NAME)
