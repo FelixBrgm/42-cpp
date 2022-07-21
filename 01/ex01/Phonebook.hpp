@@ -6,10 +6,14 @@
 class Phonebook
 {
 private:
-	Contact contacts[5];
+	Contact contacts[8];
+	int		count;
 public:
 	Phonebook();
 	~Phonebook();
+	void add_contact(Contact contact);
 };
+
+
 
 #endif
