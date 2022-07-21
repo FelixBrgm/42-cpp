@@ -13,8 +13,3 @@ Contact::~Contact()
 {
 
 }
-
-void Contact::view_index()
-{
-	std::cout << index;
-}

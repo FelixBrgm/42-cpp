@@ -5,11 +5,6 @@ bool	input_parse(std::string input);
 
 int main()
 {
-	Contact contact = Contact(1, "asdf", "asdf", "asdf", "asdf");
-
-	contact.view_index();
-
-
 	std::string input;
 
 	std::cout << "Please enter ADD, SEARCH or EXIT\n";

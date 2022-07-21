@@ -12,7 +12,6 @@ private:
 	std::string darkest_secret;
 public:
 	Contact(int _index, std::string _first_name, std::string _last_name, std::string _nickname, std::string _darkest_secret);
-	void view_index();
 	~Contact();
 };
 
