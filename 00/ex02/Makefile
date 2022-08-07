@@ -2,7 +2,7 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = bank
 
-SRC = Account.cpp testing.cpp
+SRC = Account.cpp test.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
