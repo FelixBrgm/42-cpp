@@ -73,5 +73,5 @@ void Account::_displayTimestamp(void)
 {
 	std::string time;
 	time = std::to_string(std::chrono::system_clock::now().time_since_epoch().count());
-	//std::cout << "[" << time.substr(0, 8) << "_" << time.substr(8, 6) << "] ";
+	std::cout << "[" << time.substr(0, 8) << "_" << time.substr(8, 6) << "] ";
 }
