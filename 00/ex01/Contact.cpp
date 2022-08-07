@@ -21,3 +21,13 @@ Contact::~Contact()
 {
 
 }
+
+
+void Contact::search()
+{
+	std::cout << "First name: " << first_name << "\n";
+	std::cout << "Last name: " << last_name << "\n";
+	std::cout << "Nickname: " << nickname << "\n";
+	std::cout << "Darkest Secret: " <<darkest_secret << "\n";
+	std::cout << "Phonenumber: " << phonenumber << "\n";
+}

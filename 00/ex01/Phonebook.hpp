@@ -5,13 +5,13 @@
 
 class Phonebook
 {
-private:
-	Contact contacts[8];
-	int		count;
 public:
+	int		count;
+	Contact contacts[8];
 	Phonebook();
 	~Phonebook();
 	void add_contact(Contact contact);
+	void search();
 };
 
 

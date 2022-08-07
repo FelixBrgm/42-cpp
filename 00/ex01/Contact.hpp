@@ -13,6 +13,7 @@ public:
 	Contact();
 	Contact(std::string _first_name, std::string _last_name, std::string _nickname,std::string phonenumber, std::string _darkest_secret);
 	~Contact();
+	void search();
 };
 
 #endif
