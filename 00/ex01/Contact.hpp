@@ -4,12 +4,13 @@
 
 class Contact
 {
-public:
+private:
 	std::string first_name;
 	std::string last_name;
 	std::string nickname;
 	std::string phonenumber;
 	std::string darkest_secret;
+public:
 	Contact();
 	Contact(std::string _first_name, std::string _last_name, std::string _nickname,std::string phonenumber, std::string _darkest_secret);
 	~Contact();

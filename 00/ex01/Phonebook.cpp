@@ -28,7 +28,7 @@ void Phonebook::add_contact(Contact _contact)
 
 void Phonebook::search()
 {
-	for (size_t i = 0; i < count; i++)
+	for (int i = 0; i < count; i++)
 	{
 		std::cout << i;
 		print_column(contacts[i].first_name);

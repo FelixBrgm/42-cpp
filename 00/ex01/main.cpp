@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdio>
+#include <string>
+#include <cstdlib>
 #include "Phonebook.hpp"
 
 bool		input_parse(std::string input);
@@ -26,7 +29,7 @@ int main()
 void search(Phonebook phonebook)
 {
 	std::string str;
-	int i;
+	int i = -1;
 
 	if (phonebook.count == 0)
 		return ;
@@ -34,7 +37,7 @@ void search(Phonebook phonebook)
 	do
 	{
 		str = read_var("Enter ID to get more information\n> ");
-		i = std::stoi(str);
+		sscanf(str.c_str(), "%i", &i);
 	} while (!(i < phonebook.count && i >= 0));
 	phonebook.contacts[i].search();
 }
