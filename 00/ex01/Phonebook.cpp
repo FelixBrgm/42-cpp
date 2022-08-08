@@ -4,36 +4,37 @@ void print_column(std::string str);
 
 Phonebook::Phonebook()
 {
+	_count = 0;
 }
 
 Phonebook::~Phonebook()
 {
-
 }
 
 void Phonebook::add_contact(Contact _contact)
 {
-	if (count == 8)
+
+	if (_count == 8)
 	{
 		for (size_t i = 0; i < 7; i++)
-			contacts[i] = contacts[i + 1];
-		contacts[7] = _contact;
+			_contacts[i] = _contacts[i + 1];
+		_contacts[7] = _contact;
 	}
 	else
 	{
-		contacts[count] = _contact;
-		count++;
+		_contacts[_count] = _contact;
+		_count++;
 	}
 }
 
 void Phonebook::search()
 {
-	for (int i = 0; i < count; i++)
+	for (int i = 0; i < _count; i++)
 	{
 		std::cout << i;
-		print_column(contacts[i].first_name);
-		print_column(contacts[i].last_name);
-		print_column(contacts[i].nickname);
+		print_column(_contacts[i].getfirst_name());
+		print_column(_contacts[i].getlast_name());
+		print_column(_contacts[i].getnickname());
 		std::cout << "\n";
 	}
 }
@@ -54,4 +55,15 @@ void print_column(std::string str)
 		str.erase(9);
 		std::cout << str << ".";
 	}
+}
+
+// Getters and Setters
+int Phonebook::getCount()
+{
+	return _count;
+}
+
+Contact Phonebook::getContact(int id)
+{
+	return _contacts[id];
 }

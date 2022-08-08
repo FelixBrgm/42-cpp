@@ -4,16 +4,16 @@
 #include <cstdlib>
 #include "Phonebook.hpp"
 
-bool		input_parse(std::string input);
-void		add(Phonebook &phonebook);
+bool input_parse(std::string input);
+void add(Phonebook &phonebook);
 std::string read_var(std::string message);
 void search(Phonebook phonebook);
 int main()
 {
 	std::string input;
-	Phonebook	phonebook = Phonebook();
+	Phonebook phonebook = Phonebook();
 
-	do 
+	do
 	{
 		input = read_var("Please enter ADD, SEARCH or EXIT\n> ");
 		if (input == "ADD")
@@ -21,7 +21,7 @@ int main()
 		else if (input == "SEARCH")
 			search(phonebook);
 	} while (input != "EXIT");
-	
+
 	std::cout << "END OF FUNCTION\n";
 	return (0);
 }
@@ -31,32 +31,32 @@ void search(Phonebook phonebook)
 	std::string str;
 	int i = -1;
 
-	if (phonebook.count == 0)
-		return ;
+	if (phonebook.getCount() == 0)
+		return;
 	phonebook.search();
 	do
 	{
 		str = read_var("Enter ID to get more information\n> ");
 		sscanf(str.c_str(), "%i", &i);
-	} while (!(i < phonebook.count && i >= 0));
-	phonebook.contacts[i].search();
+	} while (!(i < phonebook.getCount() && i >= 0));
+	phonebook.getContact(i).search();
 }
 
-void	add(Phonebook &phonebook)
+void add(Phonebook &phonebook)
 {
-	Contact		contact;
-	std::string	input;
-	
+	Contact contact;
+	std::string input;
+
 	input = read_var("Please enter the first name\n");
-	contact.first_name = input;
+	contact.setfirst_name(input);
 	input = read_var("Please enter the last name\n");
-	contact.last_name = input;
+	contact.setlast_name(input);
 	input = read_var("Please enter the nickname\n");
-	contact.nickname = input;
+	contact.setnickname(input);
 	input = read_var("Please enter the phonenumber\n");
-	contact.phonenumber = input;
+	contact.setphonenumber(input);
 	input = read_var("Please enter the darkest secret\n");
-	contact.darkest_secret = input;
+	contact.setdarkest_secret(input);
 	phonebook.add_contact(contact);
 }
 
