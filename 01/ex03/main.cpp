@@ -20,5 +20,6 @@ int main()
         club2.setType("some other type of club"); 
 		jim.attack();
     }
+	// system("leaks fight");
 return 0; 
 }
