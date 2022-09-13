@@ -6,7 +6,7 @@
 /*   By: fbruggem <fbruggem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 14:26:58 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/13 12:19:34 by fbruggem         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:10:24 by fbruggem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Fixed
 {
 	private:
 		int						fix_point;
-		static const int literal = 8;
+		static const int literal = 24;
 	public:
 
 		Fixed();
@@ -52,19 +52,19 @@ class Fixed
 		bool	operator != (Fixed &fix);
 
 		// binary arithmetic overloads
-		float	operator + (const Fixed &fix);
-		float	operator - (const Fixed &fix);
-		float	operator * (const Fixed &fix);
-		float	operator / (const Fixed &fix);
+		Fixed	operator + (const Fixed &fix);
+		Fixed	operator - (const Fixed &fix);
+		Fixed	operator * (const Fixed &fix);
+		Fixed	operator / (const Fixed &fix);
 
 		// increment and decrement overloads
-		float		operator ++ ( void );
-		float		operator -- ( void );
-		float		operator ++ ( int );
-		float		operator -- ( int );
+		Fixed		operator ++ ( void );
+		Fixed		operator -- ( void );
+		Fixed		operator ++ ( int );
+		Fixed		operator -- ( int );
 
 		// helper functions
-		int	getBit(int index);
+		int	getBit(int index) const;
 		
 		~Fixed();
 };

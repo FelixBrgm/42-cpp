@@ -6,7 +6,7 @@
 /*   By: fbruggem <fbruggem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 14:26:37 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/13 12:41:52 by fbruggem         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:16:44 by fbruggem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,13 @@ int main( void )
 
 
 	Fixed a(123.5f);
-	for (int i = 0; i < 34; i++)
-	{
-		std::cout << a.getBit(i) << std::endl;
-	}
-	
+	// for (int i = 0; i < 34; i++)
+	// {
+	// 	std::cout << a.getBit(i) << std::endl;
+	// }
+	Fixed b(0.00000000075f);
+	std::cout << a + b << std::endl;
 	return 0;
+	// 123.500000075
+	// 2 500 500 500 > 7 stellen
 }
