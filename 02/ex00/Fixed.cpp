@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:03:38 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/10 14:18:33 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/09/13 17:12:51 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ Fixed::Fixed(const Fixed &fix)
 {
 	std::cout << "Copy constructor called\n";
 	
-	this->fix_point = fix.fix_point;
+	Fixed f = Fixed();
+
+	f.setRawBits(fix.getRawBits());
+	*this = f;
 }
 
 Fixed& Fixed::operator= (Fixed &fix)

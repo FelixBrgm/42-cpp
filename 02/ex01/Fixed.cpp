@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbruggem <fbruggem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:03:38 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/13 12:03:26 by fbruggem         ###   ########.fr       */
+/*   Updated: 2022/09/13 17:05:34 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-// Helper Functions 
+// ************************* Helper Functions  ************************* 
 
 int high(int i, int e)
 {
@@ -25,7 +25,7 @@ int high(int i, int e)
 
 
 
-// Constructors
+// ************************* Constructors ************************* 
 
 Fixed::Fixed()
 {
@@ -94,7 +94,7 @@ std::ostream&	operator<<(std::ostream &output, const Fixed& fix)
 
 
 
-// Functions
+// ************************* Member Functions ************************* 
 
 int	Fixed::getRawBits( void ) const
 {

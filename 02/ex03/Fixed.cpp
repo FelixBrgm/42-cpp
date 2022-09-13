@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 14:29:24 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/13 16:58:14 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/09/13 17:12:27 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &fix)
 {	
-	*this = fix;
+	Fixed f = Fixed();
+
+	f.setRawBits(fix.getRawBits());
+	*this = f;
 }
 
 
