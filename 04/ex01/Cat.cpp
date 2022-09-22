@@ -1,23 +1,19 @@
-
-# include "Cat.hpp"
+#include "Cat.hpp"
 
 Cat::Cat()
 {
 	this->type = "Cat";
-	this->brain = new Brain();
 	std::cout << this->type << " has been created." << std::endl;
 }
 
-Cat::Cat(Cat const & copy)
+Cat::Cat(Cat const & copy): Animal(copy)
 {
 	this->type = "Cat";
-	this->brain = new Brain(*copy.brain);
 	std::cout << this->type << " has been created. --> Copy" << std::endl;
 }
 
 Cat::~Cat()
 {
-	delete this->brain;
 	std::cout << this->type << " has been destroyed." << std::endl;
 }
 

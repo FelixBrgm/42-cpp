@@ -1,5 +1,3 @@
-
-
 #ifndef BRAIN
 # define BRAIN
 
