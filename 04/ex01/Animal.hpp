@@ -1,15 +1,13 @@
+
 #ifndef ANIMAL
 # define ANIMAL
 
 # include <iostream>
-# include "Brain.hpp"
 
 class Animal
 {
 	protected:
 		std::string type;
-	private:
-		Brain *brain;
 	public:
 		Animal();
 		Animal(Animal const & copy);

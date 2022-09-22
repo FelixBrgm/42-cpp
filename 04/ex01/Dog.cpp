@@ -1,19 +1,23 @@
-#include "Dog.hpp"
+
+# include "Dog.hpp"
 
 Dog::Dog()
 {
 	this->type = "Dog";
+	this->brain = new Brain();
 	std::cout << this->type << " has been created." << std::endl;
 }
 
-Dog::Dog(Dog const & copy): Animal(copy)
+Dog::Dog(Dog const & copy)
 {
 	this->type = "Dog";
+	this->brain = new Brain(*copy.brain);
 	std::cout << this->type << " has been created. --> Copy" << std::endl;
 }
 
 Dog::~Dog()
 {
+	delete this->brain;
 	std::cout << this->type << " has been destroyed." << std::endl;
 }
 
