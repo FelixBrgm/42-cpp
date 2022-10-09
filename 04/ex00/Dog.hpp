@@ -8,13 +8,13 @@ class Dog: public Animal
 {
 	public:
 		Dog();
-		Dog(Dog const & copy);
+		Dog(Animal const & copy);
 
-		void operator= (Dog const & src);
+		void operator= (Animal const & src);
 
 		void makeSound( void ) const;
 
-		~Dog();
+		virtual ~Dog();
 };
 
 #endif

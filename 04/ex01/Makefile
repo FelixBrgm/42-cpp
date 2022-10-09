@@ -1,12 +1,12 @@
-NAME = ex00
+NAME = ex01
 
 CPP = c++
 CPP_FLAGS =  -Wall -Wextra -Werror -std=c++98
 RM := rm -f
 
-HEADER = ./Animal.hpp ./Dog.hpp ./Cat.hpp ./WrongCat.hpp ./WrongAnimal.hpp ./Brain.hpp
+HEADER = ./Animal.hpp ./Dog.hpp ./Cat.hpp ./Brain.hpp
 
-SRC = ./main.cpp ./Animal.cpp ./Dog.cpp ./Cat.cpp ./WrongCat.cpp ./WrongAnimal.cpp ./Brain.cpp
+SRC = ./main.cpp ./Animal.cpp ./Dog.cpp ./Cat.cpp ./Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

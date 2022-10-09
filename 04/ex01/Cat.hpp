@@ -15,9 +15,14 @@ class Cat: public Animal
 
 		void operator= (Cat const & src);
 
+		Brain		*getBrain( void ) const;
+		std::string	getIdea(int idx) const;
+		void		setBrain( Brain *new_brain);
+		void		setIdea(std::string idea, int idx);
+
 		void makeSound( void ) const;
 
-		~Cat();
+		virtual ~Cat();
 };
 
 #endif

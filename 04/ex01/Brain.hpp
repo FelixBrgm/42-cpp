@@ -13,7 +13,13 @@ class Brain
 		Brain();
 		Brain(Brain const & copy);
 
-		void operator= (Brain const & src);
+		Brain &operator= (Brain const & src);
+
+		void setIdea(int num, std::string idea);
+		std::string getIdea(int num) const;
+
+		void setIdeas( std::string ideas[] );
+		std::string *getIdeas( void );
 
 		~Brain();
 };

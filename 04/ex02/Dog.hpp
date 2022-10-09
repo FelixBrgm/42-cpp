@@ -15,12 +15,14 @@ class Dog: public Animal
 
 		void operator= (Dog const & src);
 
-		void setIdea(std::string idea, int num);
-		std::string getIdea( int num) const;
+		Brain		*getBrain( void ) const;
+		std::string	getIdea(int idx) const;
+		void		setBrain( Brain *new_brain);
+		void		setIdea(int idx, std::string idea);
 
 		void makeSound( void ) const;
 
-		~Dog();
+		virtual ~Dog();
 };
 
 #endif

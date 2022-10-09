@@ -8,9 +8,9 @@ class WrongCat: public WrongAnimal
 {
 	public:
 		WrongCat();
-		WrongCat(WrongCat const & copy);
+		WrongCat(WrongAnimal const & copy);
 
-		void operator= (WrongCat const & src);
+		void operator= (WrongAnimal const & src);
 
 		~WrongCat();
 };

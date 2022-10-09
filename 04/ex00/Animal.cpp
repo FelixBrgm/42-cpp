@@ -1,6 +1,8 @@
 
 #include "Animal.hpp"
 
+
+//  -------------- CONSTRUCTORS & DESTRUCTOR ----------------
 Animal::Animal()
 {
 	this->type = "not defined Animal";
@@ -18,11 +20,13 @@ Animal::~Animal()
 	std::cout << "Animal has been destroyed." << std::endl;
 }
 
+//  ----------------------- OPERATOR OVERLOAD -------------
 void	Animal::operator= (Animal const & src)
 {
 	this->type = src.type;
 }
 
+//  ----------------------- METHODS -----------------------
 std::string	Animal::getType( void) const { return (this->type); }
 
 void	Animal::makeSound( void ) const
