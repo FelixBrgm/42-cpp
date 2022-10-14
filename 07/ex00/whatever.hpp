@@ -1,22 +1,21 @@
 #ifndef WHATEVER_H
 #define WHATEVER_H
 
-template <typename T>
+template <class T>
 T max(T x, T y) {
 	if (x > y)
 		return (x);
 	else
 		return (y);
 }
-template <typename T>
+template <class T>
 T min(T x, T y) {
 	if (x < y)
 		return (x);
 	else
 		return (y);
 }
-template <typename T>
-void swap(T &x, T &y)
+template <class T> void swap(T &x, T &y)
 {
 	T temp;
 
@@ -24,4 +23,5 @@ void swap(T &x, T &y)
 	x = y;
 	y = temp;
 }
+
 #endif

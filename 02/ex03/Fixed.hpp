@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fbruggem <fbruggem@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 14:26:58 by afenzl            #+#    #+#             */
-/*   Updated: 2022/09/13 16:36:22 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/10/13 12:43:27 by fbruggem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Fixed
 {
 	private:
-		int						fix_point;
+		int				 fix_point;
 		static const int literal = 8;
 	public:
 
