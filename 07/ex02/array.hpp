@@ -36,7 +36,7 @@ class Array
 			size_ = cpy.size();
 			a = new T[size_];
 			for (int i = 0; i < size_; i++)
-				a[i] = int(cpy[i]);
+				a[i] = cpy[i];
 			return (*this);
 		}
 
