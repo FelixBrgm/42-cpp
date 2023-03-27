@@ -5,7 +5,7 @@ int main(int argc, char **argv) {
 
 	if (argc != 2)
 	{
-		std::cout << "Error\n" << std::endl;
+		std::cout << "Error" << std::endl;
 		return (1);
 	}
 	RPN rpn = RPN();

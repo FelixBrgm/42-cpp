@@ -1,7 +1,7 @@
 NAME = btc
-
+#   -Wall -Wextra -Werror
 CPP = c++
-CPP_FLAGS =  -Wall -Wextra -Werror -std=c++98
+CPP_FLAGS = -std=c++98
 RM := rm -f
 
 HEADER = BitcoinExchange.hpp
