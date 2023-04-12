@@ -24,7 +24,6 @@ void BitcoinExchange::display_file(std::string _input_file)
 
 	std::getline(*file, line);
 
-	std::cout << "|" << line << std::endl;
 	if (line != "date | value") {
 		throw std::runtime_error("Wrong header for input file.");
 	}
@@ -66,8 +65,6 @@ void BitcoinExchange::_insert_data_from_file()
 		throw std::runtime_error("Wrong header for database file.");
 	}
 
-	std::cout << "--- Reading database --- " << std::endl;
-	
 	while (std::getline(*file, line)) {
 		try
 		{
@@ -79,8 +76,6 @@ void BitcoinExchange::_insert_data_from_file()
 		}
 		
 	}
-	std::cout << "--------- Done ---------" << std::endl;
-	std::cout << std::endl;
 
 	_close_file(file);
 };
@@ -147,6 +142,18 @@ float isValidLine(const std::string& line) {
 	return -1;
 }
 
+std::string trim(const std::string& str)
+{
+    std::size_t start = str.find_first_not_of(" \t\n\r\f");
+    if (start == std::string::npos) {
+        return "";
+    }
+
+    std::size_t end = str.find_last_not_of(" \t\n\r\f");
+
+    return str.substr(start, end - start + 1);
+}
+
 std::pair<std::string, float> _parse_input_line(const std::string& line) {
 	char	separator;
 	int		year;
@@ -162,5 +169,5 @@ std::pair<std::string, float> _parse_input_line(const std::string& line) {
 
 	if (!isValidValue(value)) throw std::runtime_error("Incompatible number range. 0 <= n <= 1000");
 
-	return std::make_pair(line.substr(0, 10), value);
+	return std::make_pair(trim(line.substr(0, line.find(" |"))), value);
 }
