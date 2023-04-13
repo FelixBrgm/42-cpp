@@ -66,7 +66,7 @@ void insert_vec(std::vector<int>& vec, int left, int right) {
 
 void merge_insert_vec(std::vector<int>& vec, int left, int right, int threshold) {
 	if (left < right) {
-		if (right - left <= threshold) {
+		if (right - left < threshold) {
 			insert_vec(vec, left, right);
 		} else {
 			int mid = (left + right) / 2;
@@ -134,7 +134,7 @@ void insert_que(std::deque<int>& que, int left, int right) {
 
 void merge_insert_que(std::deque<int>& que, int left, int right, int threshold) {
 	if (left < right) {
-		if (right - left <= threshold) {
+		if (right - left < threshold) {
 			insert_que(que, left, right);
 		} else {
 			int mid = (left + right) / 2;
